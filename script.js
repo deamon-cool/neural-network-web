@@ -22,12 +22,12 @@ dataSum.map(item => {
     }
 });
 
-// Random number
+// Creates random value
 function random() {
     return Number(Math.random().toFixed(2));
 }
 
-// Initial random weights and biases
+// Initials random weights and biases
 let w1 = random();
 let w2 = random();
 let w3 = random();
@@ -41,7 +41,7 @@ let b0 = random();
 
 // console.log(w1, w2, w3, w4, w5, w6, b1, b2, b0);
 
-// Sigmoid function
+// Creates sigmoid value
 function sigmoid(x) {
     return 1 / (1 + Math.pow(Math.E, -x));
 }
