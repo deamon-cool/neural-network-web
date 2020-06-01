@@ -53,4 +53,12 @@ function reverseSigmoid(sigmax) {
 }
 // console.log(reverseSigmoid(sigmoid(2)));
 
+// Neural Network output
+function computeOutput(x1, x2, w1, w2, w3, w4, w5, w6, b1, b2, b0) {
+    let o = w5 * (x1 * w1 + x2 * w3 + b1) + w6 * (x1 * w2 + x2 * w4 + b2) + b0;
+
+    return o;
+}
+// console.log(computeOutput(3, 3, w1, w2, w3, w4, w5, w6, b1, b2, b0));
+
 
