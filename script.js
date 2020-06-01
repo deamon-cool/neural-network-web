@@ -26,6 +26,7 @@ dataSum.map(item => {
 function random() {
     return Number(Math.random().toFixed(2));
 }
+// console.log(random());
 
 // Initials random weights and biases
 let w1 = random();
@@ -38,16 +39,18 @@ let w6 = random();
 let b1 = random();
 let b2 = random();
 let b0 = random();
-
 // console.log(w1, w2, w3, w4, w5, w6, b1, b2, b0);
 
 // Creates sigmoid value
 function sigmoid(x) {
     return 1 / (1 + Math.exp(-x));
 }
+// console.log(sigmoid(2));
 
 // Reverses sigmoid value
 function reverseSigmoid(sigmax) {
     return Math.log(sigmax / (1 - sigmax));
 }
+// console.log(reverseSigmoid(sigmoid(2)));
+
 
