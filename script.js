@@ -43,7 +43,7 @@ let b0 = random();
 
 // Creates sigmoid value
 function sigmoid(x) {
-    return 1 / (1 + Math.pow(Math.E, -x));
+    return 1 / (1 + Math.exp(-x));
 }
 
 console.log(sigmoid(2));
