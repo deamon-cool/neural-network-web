@@ -46,3 +46,8 @@ function sigmoid(x) {
     return 1 / (1 + Math.exp(-x));
 }
 
+// Reverses sigmoid value
+function reverseSigmoid(sigmax) {
+    return Math.log(sigmax / (1 - sigmax));
+}
+
