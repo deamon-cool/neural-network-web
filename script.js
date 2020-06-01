@@ -41,3 +41,10 @@ let b0 = random();
 
 // console.log(w1, w2, w3, w4, w5, w6, b1, b2, b0);
 
+// Sigmoid function
+function sigmoid(x) {
+    return 1 / (1 + Math.pow(Math.E, -x));
+}
+
+console.log(sigmoid(2));
+
