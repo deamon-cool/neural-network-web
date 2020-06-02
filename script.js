@@ -2,7 +2,7 @@
 let container = document.querySelector('#root');
 
 // Dataset
-dataSum = [
+let dataSum = [
     { a: 3, b: 3, sum: 6 },
     { a: 10, b: 13, sum: 23 },
     { a: 5, b: 5, sum: 10 },
