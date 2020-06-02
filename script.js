@@ -48,7 +48,7 @@ w1 = Number((Math.random() * 100).toFixed(0));
 w2 = Number((Math.random() * 100).toFixed(0));
 b0 = Number((Math.random() * 100).toFixed(0));
 
-console.log(w1, w2, b0);
+// console.log(w1, w2, b0);
 
 // Computes simple perceptron output
 function computePerceptronOutput(x1, x2, w1, w2, b0) {
