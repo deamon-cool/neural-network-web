@@ -98,6 +98,10 @@ function addListeners() {
     let predicitonP = document.querySelector('#prediction');
     let learnButton = document.querySelector('#learn');
 
+    let infoP = document.querySelector('#info');
+    let infoButton = document.querySelector('#info-button');
+
+
     aIn.addEventListener('change', () => {
         x1 = Number(aIn.value);
         sum = x1 + x2;
