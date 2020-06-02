@@ -115,6 +115,19 @@ function addListeners() {
 
         sumP.textContent = `Sum: ${sum}`;
     });
+
+    learnButton.addEventListener('click', () => {
+
+        predicitonP.textContent = `
+
+        `;
+    });
+
+    infoButton.addEventListener('click', () => {
+        infoP.textContent = `
+        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction}
+        `;
+    });
 }
 
 renderSinglePerceptronPage();
