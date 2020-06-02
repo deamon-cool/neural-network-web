@@ -94,6 +94,7 @@ function addListeners() {
     let bIn = document.querySelector('#b');
     let sumP = document.querySelector('#sum');
     let predicitonP = document.querySelector('#prediction');
+    let learnButton = document.querySelector('#learn');
 
     aIn.addEventListener('change', () => {
         x1 = Number(aIn.value);
