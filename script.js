@@ -78,7 +78,15 @@ function renderSinglePerceptronPage() {
     container.innerHTML = `
     <h2>Single perceptron computing</h1>
 
+    <input id="a" type="number" placeholder="a">
+    <input id="b" type="number" placeholder="b">
+    <p id="sum">Sum:</p>
+    <p id="prediction">Prediction:</p>
+
+    <button id="learn">Learn more</button>
     `;
+
+    addListeners();
 }
 
 
