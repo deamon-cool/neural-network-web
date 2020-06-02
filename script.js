@@ -83,6 +83,9 @@ function renderSinglePerceptronPage() {
     <p id="sum">Sum:</p>
     <p id="prediction">Prediction:</p>
     <button id="learn">Learn</button>
+    <p>------------------------</p>
+    <button id="info-button">Get more Info</button>
+    <p id="info">Info:</p>
     `;
 
     addListeners();
