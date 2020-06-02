@@ -82,8 +82,9 @@ function renderSinglePerceptronPage() {
     <input id="b" type="number" placeholder="b">
     <p id="sum">Sum:</p>
     <p id="prediction">Prediction:</p>
+    <button id="predict">Predict</button>
     <button id="learn">Learn</button>
-    <p>------------------------</p>
+    <p>----------------------------------</p>
     <button id="info-button">Get more Info</button>
     <p id="info">Info:</p>
     `;
@@ -96,6 +97,7 @@ function addListeners() {
     let bIn = document.querySelector('#b');
     let sumP = document.querySelector('#sum');
     let predicitonP = document.querySelector('#prediction');
+    let predictButton = document.querySelector('#predict');
     let learnButton = document.querySelector('#learn');
 
     let infoP = document.querySelector('#info');
