@@ -30,7 +30,7 @@ let w1 = random();
 let w2 = random();
 
 let b = random();
-// console.log(w1, w2, w3, w4, w5, w6, b1, b2, b0);
+console.log(w1, w2, b);
 
 // Simple perceptron
 function computePerceptronOutput(x1, x2, w1, w2, b) {
