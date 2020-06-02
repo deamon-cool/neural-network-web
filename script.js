@@ -41,6 +41,41 @@ let b2 = random();
 let b0 = random();
 // console.log(w1, w2, w3, w4, w5, w6, b1, b2, b0);
 
+
+//-------------------------- Single perceptron
+
+console.log(w1, w2, b);
+
+// Simple perceptron
+function computePerceptronOutput(x1, x2, w1, w2, b) {
+    let output = x1 * w1 + x2 * w2 + b;
+
+    return output;
+}
+
+// Compute corrected weight and bias
+function computeParamameters(x1, x2, d, y) {
+    let n = 0.01;
+    let diff = d - y;
+
+    w1 += n * diff * x1;
+    w2 += n * diff * x2;
+    b0 += n * diff;
+}
+
+// Renders single perceptron computing page
+function renderSinglePerceptronPage() {
+    container.innerHTML = `
+    <h2>Single perceptron computing</h1>
+
+    `;
+}
+
+
+
+
+//--------------------------
+
 // Creates sigmoid value
 function sigmoid(x) {
     return 1 / (1 + Math.exp(-x));
