@@ -89,6 +89,26 @@ function renderSinglePerceptronPage() {
     addListeners();
 }
 
+function addListeners() {
+    let aIn = document.querySelector('#a');
+    let bIn = document.querySelector('#b');
+    let sumP = document.querySelector('#sum');
+    let predicitonP = document.querySelector('#prediction');
+
+    aIn.addEventListener('change', () => {
+        x1 = Number(aIn.value);
+        sum = x1 + x2;
+
+        sumP.textContent = `Sum: ${sum}`;
+    });
+
+    bIn.addEventListener('change', () => {
+        x2 = Number(bIn.value);
+        sum = x1 + x2;
+
+        sumP.textContent = `Sum: ${sum}`;
+    });
+}
 
 
 
