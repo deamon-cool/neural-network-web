@@ -118,16 +118,30 @@ function addListeners() {
         sumP.textContent = `Sum: ${sum}`;
     });
 
-    learnButton.addEventListener('click', () => {
+    predictButton.addEventListener('click', () => {
+        prediction = computePerceptronOutput(x1, x2, w1, w2, b0);
+
+        infoP.innerHTML += `
+        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
+        `;
 
         predicitonP.textContent = `
-
+        Prediction: ${prediction}
         `;
     });
 
+    learnButton.addEventListener('click', () => {
+        computeParameters(x1, x2, sum, prediction);
+
+        infoP.innerHTML += `
+        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
+        `;
+    });
+
+
     infoButton.addEventListener('click', () => {
-        infoP.textContent = `
-        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction}
+        infoP.innerHTML += `
+        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
         `;
     });
 }
