@@ -110,6 +110,9 @@ function addListeners() {
     });
 }
 
+renderSinglePerceptronPage();
+
+
 
 
 //--------------------------
