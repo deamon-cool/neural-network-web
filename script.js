@@ -67,6 +67,12 @@ function computeParameters(x1, x2, d, y) {
     b0 += n * diff;
 }
 
+// Global variables
+let x1 = 0;
+let x2 = 0;
+let sum = 0;
+let prediction = 0;
+
 // Renders single perceptron computing page
 function renderSinglePerceptronPage() {
     container.innerHTML = `
