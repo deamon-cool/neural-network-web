@@ -80,7 +80,8 @@ function renderSinglePerceptronPage() {
 
     <input id="a" type="number" placeholder="a">
     <input id="b" type="number" placeholder="b">
-
+    <br>
+    <button id="random">Generate random values</button>
     <button id="predict">Predict</button>
     <button id="learn">Learn</button>
     <p>----------------------------------</p>
@@ -92,9 +93,12 @@ function renderSinglePerceptronPage() {
     addListeners();
 }
 
+// Adds listeners
 function addListeners() {
     let aIn = document.querySelector('#a');
     let bIn = document.querySelector('#b');
+
+    let generateRandomValsButton = document.querySelector('#random');
     let predictButton = document.querySelector('#predict');
     let learnButton = document.querySelector('#learn');
 
@@ -113,6 +117,16 @@ function addListeners() {
     bIn.addEventListener('change', () => {
         x2 = Number(bIn.value);
         sum = x1 + x2;
+    });
+
+
+    generateRandomValsButton.addEventListener('click', () => {
+        x1 = Number((Math.random()).toFixed(2));
+        x2 = Number((Math.random()).toFixed(2));
+        sum = x1 + x2;
+
+        aIn.value = x1;
+        bIn.value = x2;
     });
 
     predictButton.addEventListener('click', () => {
