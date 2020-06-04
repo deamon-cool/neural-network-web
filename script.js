@@ -80,12 +80,12 @@ function renderSinglePerceptronPage() {
 
     <input id="a" type="number" placeholder="a">
     <input id="b" type="number" placeholder="b">
-    <p id="sum">Sum:</p>
-    <p id="prediction">Prediction:</p>
+
     <button id="predict">Predict</button>
     <button id="learn">Learn</button>
     <p>----------------------------------</p>
     <button id="info-button">Get more Info</button>
+    <button id="clear-info">Clear Info</button>
     <p id="info">Info:</p>
     `;
 
@@ -95,43 +95,45 @@ function renderSinglePerceptronPage() {
 function addListeners() {
     let aIn = document.querySelector('#a');
     let bIn = document.querySelector('#b');
-    let sumP = document.querySelector('#sum');
-    let predicitonP = document.querySelector('#prediction');
     let predictButton = document.querySelector('#predict');
     let learnButton = document.querySelector('#learn');
 
     let infoP = document.querySelector('#info');
     let infoButton = document.querySelector('#info-button');
+    let clearInfo = document.querySelector('#clear-info');
 
+    aIn.value = '0';
+    bIn.value = '0';
 
     aIn.addEventListener('change', () => {
         x1 = Number(aIn.value);
         sum = x1 + x2;
-
-        sumP.textContent = `Sum: ${sum}`;
     });
 
     bIn.addEventListener('change', () => {
         x2 = Number(bIn.value);
         sum = x1 + x2;
-
-        sumP.textContent = `Sum: ${sum}`;
     });
 
     predictButton.addEventListener('click', () => {
         prediction = computePerceptronOutput(x1, x2, w1, w2, b0);
 
         infoP.innerHTML += `
-        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
-        `;
-
-        predicitonP.textContent = `
-        Prediction: ${prediction}
+        <br>
+        <strong>__</strong>
+        w1 = ${w1} <strong>__</strong>
+        w2 = ${w2} <strong>__</strong>
+        b= ${b0} <strong>__</strong>
+        x1 = ${x1} <strong>__</strong>
+        x2 = ${x2} <strong>__</strong>
+        sum = ${sum} <strong>__</strong>
+        prediction = ${prediction}
+        <strong>__</strong>
         `;
     });
 
     learnButton.addEventListener('click', () => {
-        computeParameters(x1, x2, sum, prediction);
+        updateParameters(x1, x2, sum, prediction);
 
         infoP.innerHTML += `
         w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
@@ -143,6 +145,10 @@ function addListeners() {
         infoP.innerHTML += `
         w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
         `;
+    });
+
+    clearInfo.addEventListener('click', () => {
+        infoP.innerHTML = ``;
     });
 }
 
