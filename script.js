@@ -98,7 +98,7 @@ function addListeners() {
     let predictButton = document.querySelector('#predict');
     let learnButton = document.querySelector('#learn');
 
-    let infoP = document.querySelector('#info');
+    let infoContent = document.querySelector('#info');
     let infoButton = document.querySelector('#info-button');
     let clearInfo = document.querySelector('#clear-info');
 
@@ -118,38 +118,38 @@ function addListeners() {
     predictButton.addEventListener('click', () => {
         prediction = computePerceptronOutput(x1, x2, w1, w2, b0);
 
-        infoP.innerHTML += `
-        <br>
-        <strong>__</strong>
-        w1 = ${w1} <strong>__</strong>
-        w2 = ${w2} <strong>__</strong>
-        b= ${b0} <strong>__</strong>
-        x1 = ${x1} <strong>__</strong>
-        x2 = ${x2} <strong>__</strong>
-        sum = ${sum} <strong>__</strong>
-        prediction = ${prediction}
-        <strong>__</strong>
-        `;
+        generateInfo(infoContent);
     });
 
     learnButton.addEventListener('click', () => {
         updateParameters(x1, x2, sum, prediction);
 
-        infoP.innerHTML += `
-        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
-        `;
+        generateInfo(infoContent);
     });
 
 
     infoButton.addEventListener('click', () => {
-        infoP.innerHTML += `
-        w1 = ${w1}, w2 = ${w2}, b= ${b0} x1 = ${x1}, x2 = ${x2}, sum = ${sum}, prediction = ${prediction} <br>
-        `;
+        generateInfo(infoContent);
     });
 
     clearInfo.addEventListener('click', () => {
-        infoP.innerHTML = ``;
+        infoContent.innerHTML = `Info: `;
     });
+}
+
+function generateInfo(infoP) {
+    infoP.innerHTML += `
+    <br>
+    <strong>__</strong>
+    w1 = ${w1} <strong>__</strong>
+    w2 = ${w2} <strong>__</strong>
+    b= ${b0} <strong>__</strong>
+    x1 = ${x1} <strong>__</strong>
+    x2 = ${x2} <strong>__</strong>
+    sum = ${sum} <strong>__</strong>
+    prediction = ${prediction}
+    <strong>__</strong>
+    `;
 }
 
 renderSinglePerceptronPage();
