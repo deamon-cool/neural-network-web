@@ -143,6 +143,9 @@ function addListeners() {
     });
 
     learnButton.addEventListener('click', () => {
+        prediction = computePerceptronOutput(x1, x2, w1, w2, b0);
+        prediction = Number(prediction.toFixed(2));
+
         updateParameters(x1, x2, sum, prediction);
 
         generateInfo(infoContent);
