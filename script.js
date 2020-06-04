@@ -129,6 +129,7 @@ function addListeners() {
         x1 = Number((Math.random()).toFixed(2));
         x2 = Number((Math.random()).toFixed(2));
         sum = x1 + x2;
+        sum = Number(sum.toFixed(2));
 
         aIn.value = x1;
         bIn.value = x2;
