@@ -87,8 +87,8 @@ function renderSinglePerceptronPage() {
     <input id="b" type="number" placeholder="b">
     <br>
     <button id="random">Generate random values</button>
-    <button id="predict">Predict</button>
     <button id="learn">Learn</button>
+    <button id="predict">Predict</button>
     <p>----------------------------------</p>
     <button id="info-button">Get more Info</button>
     <button id="clear-info">Clear Info</button>
