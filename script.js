@@ -167,8 +167,6 @@ function generateInfo(infoP) {
     w1 = ${w1},
     w2 = ${w2},
     b= ${b0} <br>
-    x1 = ${x1},
-    x2 = ${x2}
     `;
 }
 
