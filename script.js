@@ -63,13 +63,8 @@ function updateParameters(x1, x2, trueResult, neuronResult) {
     let diff = trueResult - neuronResult;
 
     w1 += n * diff * x1;
-    w1 = Number(w1.toFixed(2));
-
     w2 += n * diff * x2;
-    w2 = Number(w2.toFixed(2));
-
     b0 += n * diff;
-    b0 = Number(b0.toFixed(2));
 }
 
 // Global variables
