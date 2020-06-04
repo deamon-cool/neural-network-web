@@ -58,9 +58,9 @@ function computePerceptronOutput(x1, x2, w1, w2, b0) {
 }
 
 // Computes corrected weight and bias
-function computeParameters(x1, x2, d, y) {
+function updateParameters(x1, x2, trueResult, neuronResult) {
     let n = 1;
-    let diff = d - y;
+    let diff = trueResult - neuronResult;
 
     w1 += n * diff * x1;
     w2 += n * diff * x2;
