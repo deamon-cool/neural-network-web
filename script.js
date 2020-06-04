@@ -44,9 +44,9 @@ let b0 = random();
 
 //-------------------------- Single perceptron: 2 inputs, one output
 
-w1 = Number((Math.random() * 100).toFixed(0));
-w2 = Number((Math.random() * 100).toFixed(0));
-b0 = Number((Math.random() * 100).toFixed(0));
+w1 = Number((Math.random()).toFixed(2));
+w2 = Number((Math.random()).toFixed(2));
+b0 = Number((Math.random()).toFixed(2));
 
 // console.log(w1, w2, b0);
 
